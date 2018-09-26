@@ -1,0 +1,11 @@
+title = "set"
+url = "/set/:user/:id/:token?"
+is_hidden = 0
+
+[restapi]
+restID = 2
+userID = "{{ :user }}"
+cilentID = "{{ :id }}"
+token = "{{ :token }}"
+==
+{% component 'restapi' %}

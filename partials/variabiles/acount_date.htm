@@ -1,0 +1,8 @@
+==
+{% if user.account_frist_active == null %}
+    <div class="tile-stub"></div>
+{% elseif user.account_frist_date_start == null %}
+    Добавление параметра
+{% else %}
+	От {{ user.account_frist_date_start | truncate(10, false, "") }} до {{ "now"|date("Y-m-d") }}
+{% endif %}

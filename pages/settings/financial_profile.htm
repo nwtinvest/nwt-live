@@ -1,0 +1,145 @@
+title = "Изменить финансовый профиль"
+url = "/settings/financial_profile"
+layout = "home/index"
+is_hidden = 0
+==
+<article data-grid="stack-1" class="context-heading">
+
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Изменить финансовый профиль</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+    
+    <section data-grid="col-12 pad-12x">
+        <div data-grid="col-12">
+			<h2 class="c-heading-2">Изменить финансовый профиль</h2>
+			<hr class="c-divider f-pad-bottom-3x">
+		</div>
+    </section> 
+
+    
+    <form id="form-registration" action="" method=post enctype="multipart/form-data" >
+        {{ form_open() }}
+            <!--start form content-->
+            <section data-grid="col-12 pad-12x">
+            
+            <div data-grid="col-6">
+                <label class="c-label" for="work">Тип занятости*</label>
+                <select class="nwt-select" name="work" data-validation="required">
+                    <option  value=" ">Выберите...</option>
+                    <option value="Наемный сотрудник">Наемный сотрудник</option>
+                    <option value="Самозанятый">Самозанятый</option>
+                    <option value="На пенсии">На пенсии</option>
+                    <option value="Студент">Студент</option>
+                    <option value="Студент">Безработный</option>
+                </select>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="anual_income">Годовой доход*</label>
+                <select class="nwt-select" name="anual_income" data-validation="required">
+                    <option  value=" ">Выберите...</option>
+                    <option value="0 – 50к$">0 – 50к$</option>
+                    <option value="50k – 100k$">50k – 100k$</option>
+                    <option value="100k – 250k$">100k – 250k$</option>
+                    <option value="250k – 500k$">250k – 500k$</option>
+                    <option value="500k – 1000k$">500k – 1000k$</option>
+                    <option value=">1000k$">>1000k$</option>
+                </select>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="income_source">Источник дохода*</label>
+                <select class="nwt-select" name="income_source" data-validation="required">
+                    <option value=" ">Выберите...</option>
+                    <option value="Частный предприниматель / Владелец бизнеса">Частный предприниматель / Владелец бизнеса</option>
+                    <option value="Сбережения / Инвестиции">Сбережения / Инвестиции</option>
+                    <option value="Подарки / Наследство">Подарки / Наследство</option>
+                    <option value="Другое">Другое</option>
+                </select>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <fieldset class="c-radio f-inline">
+                    <legend class="c-label">Есть ли у вас опыт торговли?*</legend>
+                    <div>
+                        <div>
+                            <label class="c-label">
+                                <input id="trading_status1" type="radio" name="trading_status" value="Real">
+                                <span>Да, я торговал на реальном торговом счете.</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_status2" type="radio" name="trading_status" value="Demo">
+                                <span>Да, я торговал на демо – счете</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_status3" type="radio" name="trading_status" value="Нет" checked="true">
+                                <span>Нет</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <fieldset class="c-radio f-inline">
+                    <legend class="c-label">Знания и опыт финансовых инструментов*</legend>
+                    <div>
+                        <div>
+                            <label class="c-label">
+                                <input id="trading_experence1" type="radio" name="trading_experence" value="Акции/Облигации">
+                                <span>Фондовый рынок</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_experence2" type="radio" name="trading_experence" value="CFDs">
+                                <span>Forex/CFDs</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_experence3" type="radio" name="trading_experence" value="Фондовый рынок/CFDs">
+                                <span>Фондовый рынок и Forex/CFDs</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_experence4" type="radio" name="trading_experence" value="Нет" checked="true">
+                                <span>Нет</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+
+            <!--BUTON-->
+            <div class="nwt-margin-medium-top" data-grid="col-12">
+                <button role="button" type="submit" class="button button_size_xl button_width_available button_theme_nwt-on-white" >
+                    <span class="button__text">Изменить </span>
+                </button>
+            </div>
+
+        
+        <!--end form content-->
+        </section>   
+        {{ form_close() }}
+     </form>
+
+ </article>   
+ <script>
+    $.validate({
+  modules : 'security, toggleDisabled'
+});
+    $.validate({
+  modules : 'date'
+});
+    $.validate({
+  lang : 'ru'
+});
+ </script>

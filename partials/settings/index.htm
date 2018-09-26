@@ -1,0 +1,272 @@
+==
+<article data-grid="stack-1" class="context-heading">
+    
+    <section data-grid="col-12 pad-12x">
+    	<mee-banner>
+    	<div data-grid="col-12" class="amc-banner">
+			<div data-grid=col-12>
+			    <div class="m-persona-1">
+			        <div>
+			            {% if user.avatar == null %}
+			             <picture role="img">
+			                <img class="c-image f-round" src="{{ 'assets/img/icons/nwt-icon-full.png'|theme }}">
+			             </picture>
+			             {% else %}
+			             <picture role="img">
+			                <img class="c-image f-round" src="{{ user.avatar.path }}" style="width: 100%; height: 100%; border-radius: 50%; ">
+			             </picture>
+			             {% endif%}
+			        </div>
+			        <div class="nwt-light">
+			            <h5 class="c-heading-3">{{  user.name | truncate(15) }}</h5>
+			            <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-color">
+			            NWT{{ user.id * 8586 * 7 * 26}}
+			        	</p>
+			        </div>
+			    </div>
+			</div>
+		</div>
+	</mee-banner>
+    </section>
+
+    <section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+    	<!--Head-->
+    	<h2 class="c-heading-2" data-grid=col-12>
+    	Настройки 
+    	</h2>
+    	<!--slide1-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Безопасность</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_password icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/password">Изменить пароль</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/password">Настройте безопасность вашего личного кабинета.</a>
+			        	</p>
+			        	<a href="/settings/password">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Изменить</a></span>
+				            </button>
+				        </a>
+            		</div>
+			    </div>
+			</div>
+		<!--slide2-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">2FA</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_2fa icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/2fa">Двухфакторная аутентификация</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/2fa">Дополнительный уровень защиты для вашей учетной записи.</a>
+			        	</p>
+			        	<a href="/settings/2fa">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Настроить</span>
+				            </button>
+				        </a>
+            		</div>
+			    </div>
+			</div>
+	</section>
+
+	<section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+    	<!--slide1-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Аватар</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_avatar icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/avatar">Изменить аватар</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/avatar">
+			            	Аватар помогает сделать вашу учетную запись узнаваемой в сервисах NWT INVEST.
+			            	</a>
+			        	</p>
+			        	<a href="/settings/avatar">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Настроить</span>
+				            </button>
+				        </a>
+				    </div>
+			    </div>
+			</div>
+		<!--slide2-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Дата рождения</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_br icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/bday">Изменить дату рождения</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/bday">
+			            	Настройки должны соответствовать дате, указанной на счетах брокера.
+			            	</a>
+			        	</p>
+			        	<a href="/settings/bday">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Настроить</span>
+				            </button>
+				        </a>
+					</div>
+			    </div>
+			</div>
+		<!--slide3-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Финансовый профиль</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_financial_profile icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/financial_profile">Изменить финансовый профиль</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/financial_profile">Настройки финансового профиля, в соответствии с текущим уровнем.</a>
+			        	</p>
+			        	<a href="/settings/financial_profile">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Настроить</span>
+				            </button>
+				        </a>
+            		</div>
+			    </div>
+			</div>
+		<!--slide4-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Адрес</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_map icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/adress">Изменить адрес</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/adress">
+			            	Адрес необходим, для отправки бумажных счетов и корреспонденции.
+			            	</a>
+			        	</p>
+			        	<a href="/settings/adress">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Настроить</span>
+				            </button>
+				        </a>
+            		</div>
+			    </div>
+			</div>
+	</section>
+	<section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+		<!--slide1-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Рассылки</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_mail icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/email">Настройки уведомлений</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/email">
+			            	Настоите то что вы хотите получить по электроной почте.
+			            	</a>
+			        	</p>
+			        	<a href="/settings/email">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Настроить</span>
+				            </button>
+				        </a>
+            		</div>
+			    </div>
+			</div>
+		<!--slide2-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Реклама</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_ads icon_theme_nwt-on-white"></span>
+            			</div>
+				        <h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/adversing">Параметры рекламы</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/adversing">
+			            	Настроить показ рекламы, в социальных сетях и в сервисах NWT INVEST.
+			            	</a>
+						</p>
+						<a href="/settings/adversing">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				            		<span class="button__text">Настроить</span>
+				            </button>
+				        </a>
+            		</div>
+			    </div>
+			</div>
+		<!--slide3-->
+	    	<div data-grid=col-3>
+	    		<div class="c-card">
+				    <card-header>
+            		<h4 class="c-heading-4">Конфиденциальность</h4> 
+            		</card-header>
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<span class="icon icon_size_xxl icon_name_time_line icon_theme_nwt-on-white"></span>
+            			</div>
+            			<h2 class="c-heading-5" data-grid=col-12>
+				    		<a href="/settings/activity-history">Журнал действий</a>
+				    	</h2>
+				    	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	<a href="/settings/activity-history">
+			            	Действия совершенные в аккаунте NWT INVEST.
+			            	</a>
+			        	</p>
+			        	<a href="/settings/activity-history">
+				        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+				        		<span class="button__text">Применить</span>
+				        	</button>
+				       	</a>
+            		</div>
+			    </div>
+			</div>
+	</section>
+
+</article>

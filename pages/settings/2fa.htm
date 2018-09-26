@@ -1,0 +1,95 @@
+title = "Настройки"
+url = "/settings/2fa"
+layout = "home/index"
+is_hidden = 0
+==
+<article data-grid="stack-1" class="context-heading">
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Двухфакторная аутентификация</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<h2 class="c-heading-2">
+				Двухфакторная аутентификация
+			</h2>
+			<hr class="c-divider f-pad-bottom-3x">
+		</div>
+		<div data-grid="col-12">
+			<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+				Дополнительный уровень защиты для вашей учетной записи.
+        	</p>
+		</div>
+		<div data-grid="col-12">
+			<div class="m-alert f-warning" role="alert">
+			   	<div>
+			        <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-color">
+			        	Упс , произошла ошибка, дании модули недоступен для вашего региона, так как номер телефона небыл верифитирован, пожалуста обратитесь в службу подержки.
+			        </p>
+			        <p class="c-paragraph-1 paragraph_theme_nwt-on-color">
+			        	ERROR__54343
+			        </p>
+			    </div>
+			</div> 
+		</div>
+
+		<div data-grid="col-2">
+			<picture>
+			<img class="c-image f-qr" src="http://live.nwt/themes/live-nwt/assets/img/icons/qr-54343.svg" alt="">	
+			</picture>
+		</div>
+		<div data-grid="col-6">
+			<h2 class="c-heading-2">
+				Невозможно сгенерировать qr-код 
+			</h2>
+
+				
+			<div class="c-toggle f-disabled">
+			    <label class="c-label" id="c-label-3" for="example-3">Создаем новые резервные коды?</label>
+				    <button id="qr-new" name="qr-new" role="checkbox" aria-checked="false" aria-labelledby="c-label-3 c-state-label-3" disabled="disabled">
+				    </button>
+			    <span data-on-string="On" data-off-string="Off" id="c-state-label-3">Нет</span>
+			</div>
+
+			<div class="c-toggle f-disabled">
+			    <label class="c-label" id="c-label-3" for="example-3">Удалить старые устройства?</label>
+				    <button id="qr-new" name="qr-new" role="checkbox" aria-checked="false" aria-labelledby="c-label-3 c-state-label-3" disabled="disabled">
+				    </button>
+			    <span data-on-string="On" data-off-string="Off" id="c-state-label-3">Нет</span>
+			</div>
+
+		</div>
+		<div data-grid="col-12">
+			<div class="m-alert f-error" role="alert">
+			   	<div>
+			   		<h2 class="c-heading-2 heading_theme_nwt-on-color">
+					Резервные коды 
+					</h2>
+			        <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-color">
+						<button role="button" type="button" disabled="" class="button button_disabled button_size_s button_theme_nwt-on-color">
+							<span class="button__text">Скачать</span>
+						</button>
+					</p>
+					<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-color">
+				   0000000000000
+				</p>
+			    </div>
+			</div>
+		</div>
+
+	</section>
+
+</article>

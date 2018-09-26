@@ -1,0 +1,7 @@
+==
+{% if user.account_frist_active == null %}
+	{% set profit_mounth = 0 %}
+{% else %}
+	{% set profit_mounth = user.account_frist_profit_mounth * 100 / user.account_frist_init_sum %}
+{% endif %}
+{{ profit_mounth }}

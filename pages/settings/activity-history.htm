@@ -1,0 +1,104 @@
+title = "Журнал действий"
+url = "/settings/activity-history"
+layout = "home/index"
+is_hidden = 0
+
+[RainLab\User\Components\Account account]
+paramCode = "code"
+forceSecure = 0
+==
+<article data-grid="stack-1" class="context-heading">
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Журнал действий</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<h2 class="c-heading-2">Журнал действий</h2>
+			<hr class="c-divider">
+		</div>
+	</section>
+
+	<section data-grid="col-12 pad-12x">
+		
+		<div class="nwt-margin-medium-top" data-grid="col-2">
+			<div class="person-picture">
+			    <div>
+			        {% partial 'variabiles/avatar' %}
+			    </div>
+			</div>
+		</div>
+
+		<div class="nwt-text-left" data-grid="col-10">
+			<div class="element-wrapper">
+		      <div class="element-box">
+		        <h6 class="element-header c-heading-4">
+		          {% partial 'variabiles/nwtid' %}
+		        </h6>
+		        <div class="timed-activities compact">
+		          <div class="timed-activity">
+		            <div class="ta-date">
+		            	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		             		<span>{% partial 'variabiles/acount_activated_yar' %}</span>
+		             	</p>
+		            </div>
+		            <div class="ta-record-w">
+		             <div class="ta-record">
+		                <div class="ta-timestamp">
+		                	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                  		<strong>{% partial 'variabiles/acount_activated_at' %}</strong>
+		                  	</p>
+		                </div>
+		                <div class="ta-activity">
+		                	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                		Получен уникальный {% partial 'variabiles/nwtid' %}   
+		                	</p>
+		                </div>
+		              </div>
+		              <div class="ta-record">
+		                <div class="ta-timestamp">
+		                	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                  		<strong>{% partial 'variabiles/acount_activated_at' %}</strong>
+		                  	</p>
+		                </div>
+		                <div class="ta-activity">
+		                	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                		Аккаунт был активирован
+		                	</p>
+		                </div>
+		              </div>
+		             <div class="ta-record">
+		                <div class="ta-timestamp">
+		                	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                  		<strong>{% partial 'variabiles/acount_registration_at' %}</strong>
+		                  	</p>
+		                </div>
+		                <div class="ta-activity">
+		                	<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                		Аккаунт был зарегистрирован 
+		                	</p>
+		                </div>
+		              </div>
+		            </div>
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+		</div>
+
+	</section>
+
+</article>

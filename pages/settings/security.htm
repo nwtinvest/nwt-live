@@ -1,0 +1,100 @@
+title = "Настройки"
+url = "/settings/password"
+layout = "home/index"
+is_hidden = 0
+==
+<article data-grid="stack-1" class="context-heading">
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Изменить пароль</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<h2 class="c-heading-2">Изменить пароль</h2>
+			<hr class="c-divider f-pad-bottom-3x">
+		</div>
+		<div data-grid="col-12">
+			<p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+				{% partial 'variabiles/nwtid' %}  Минимальная длина 8 символов
+        	</p>
+		</div>
+		<div data-grid="col-12">
+		{{ form_ajax('onUpdate', { model: user })}}
+			<form id="user-cpassword">
+				
+				<div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-6">
+						<label class="c-label" for="accountPassword">Введите новый пароль*</label>
+		                <input 
+		                	class="nwt-input"
+		                    id="accountPassword"
+		                    type="password" 
+		                    name="password"
+		                    data-validation="length" data-validation-length="min8" 
+		                />
+	                </div>
+	            </div>
+	            
+	            <div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-6">
+		            	<label class="c-label" for="accountPassword">Повторите пароль*</label>
+		                <input
+		                   class="nwt-input"
+		                   id="accountPasswordConfirm"
+		                   type="password" 
+		                   name="password_confirmation"
+		                   data-validation="confirmation" data-validation-confirm="password" 
+		                   data-validation="length" data-validation-length="min8" 
+		                />
+		            </div>
+		        </div>
+	        	
+	        	<div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-6">
+		            	<div class="c-checkbox">
+		                    <label class="c-label">
+		                        <input type="checkbox" id="password92" name="password72" value="1" aria-checked="false">
+		                        <span aria-hidden="true">
+		                        Менять пароль через каждые 92 дня. 
+		                        </span>
+		                    </label>
+		                </div>
+		            </div>
+		        </div>
+
+		        <div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-6">
+			           	<button role="button" type="submit" class="button button_size_xl button_width_available button_theme_nwt-on-white" >
+			                <span class="button__text">Изменить пароль</span>
+			            </button>
+			    	</div>
+		        </div>
+
+            </form>
+        {{ form_close() }}
+	</div>
+	
+	</section>
+
+</article>
+<script>
+$.validate({
+    modules: 'security, toggleDisabled'
+});
+$.validate({
+    lang: 'ru'
+});
+</script>

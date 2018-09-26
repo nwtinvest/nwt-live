@@ -1,0 +1,129 @@
+title = "Home"
+url = "/"
+layout = "home/index"
+is_hidden = 0
+
+[RainLab\User\Components\Account account]
+paramCode = "code"
+forceSecure = 0
+==
+<article data-grid="stack-1" class="context-heading">
+   	
+   	{% partial 'home/1-section-top' %}
+    
+    <section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+    	<div data-grid="col-12">
+	    	<h2 class="add-account__title heading_theme_nwt-on-white">
+				<a href="/invest">
+				<div class="icon icon-nwt-invest"></div>Инвестиции
+				</a>
+			</h2>
+		</div>
+    	<!--end heda-->
+	    	
+		<!--slide1-->
+	    	{% partial 'home/2-section-invest-1' %}
+        <!--slide2-->
+	    	{% partial 'home/3-section-invest-2' %}
+        <!--slide3-->
+	    	{% partial 'home/4-section-invest-3' %}
+
+	</section>
+
+		<section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+	    	<h2 class="add-account__title heading_theme_nwt-on-white">
+			    <a href="/analytic/subscription">
+			        <div class="icon icon-nwt-neowave"></div>Подписки
+			    </a>
+			</h2>
+		</div>   	
+		<!--end heda-->
+	    	
+		<!--slide1-->
+	    	<div data-grid=col-4>
+	    		<div class="c-card {% partial 'home/margin' %}">
+				    
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<h2 class="c-heading-5" data-grid=col-12 style="padding: 0px 0 6px;">
+				    		<a href="/settings/2fa">Валютные пары</a>
+				    		</h2>
+				            <div class="earned-management">
+					    	<div class="add-account__subtitle">Заканчиваться: --.--.----</div>
+						    <div class="earned-management">
+						    	<div class="money">
+						    		Активирован
+						    	</div>
+						    </div>
+						</div>
+				        </div>
+				        <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	Стоимости продления: 48$
+			        	</p>
+			        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+			            		<span class="button__text"><a href="/invest">Подробнее</a></span>
+			            </button>
+            		</div>
+			    </div>
+			</div>
+
+			<!--slide2-->
+	    	<div data-grid=col-4>
+	    		<div class="c-card {% partial 'home/margin' %}">
+				    
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<h2 class="c-heading-5" data-grid=col-12 style="padding: 0px 0 6px;">
+				    		<a href="/settings/2fa">Мировые индексы</a>
+				    		</h2>
+				            <div class="earned-management">
+					    	<div class="add-account__subtitle">Заканчиваться: --.--.----</div>
+						    <div class="earned-management">
+						        <div class="money">
+									Активирован
+						        </div>
+						    </div>
+						</div>
+				        </div>
+				        <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	Стоимости продления: 78$
+			        	</p>
+			        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+			            		<span class="button__text"><a href="/invest">Подробнее</a></span>
+			            </button>
+            		</div>
+			    </div>
+			</div>
+
+			<!--slide3-->
+	    	<div data-grid=col-4>
+	    		<div class="c-card {% partial 'home/margin' %}">
+				    
+            		<div class="c-card-content nwt-text-left nwt-card-body">
+            			<div>
+            				<h2 class="c-heading-5" data-grid=col-12 style="padding: 0px 0 6px;">
+				    		<a href="/settings/2fa">Криптовалюты</a>
+				    		</h2>
+				            <div class="earned-management">
+					    	<div class="add-account__subtitle">Заканчиваться: --.--.----</div>
+						    <div class="earned-management">
+						        <div class="money">
+									Активирован
+						        </div>
+						    </div>
+						</div>
+				        </div>
+				        <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+			            	Стоимости продления: 98$
+			        	</p>
+			        	<button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+			            		<span class="button__text"><a href="/invest">Подробнее</a></span>
+			            </button>
+            		</div>
+			    </div>
+			</div>
+
+	</section>
+	
+</article>

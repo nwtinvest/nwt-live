@@ -1,0 +1,366 @@
+==
+<article data-grid="stack-1" class="context-heading">
+    
+    <section data-grid="col-12 pad-12x">
+        <div class="nwt-text-center" data-grid="col-12">
+            <h2 class="c-heading-1">
+                Остался еще один шаг
+            </h2>
+            <div  class="nwt-alert-blue nwt-light">
+                <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-color">
+                      Если вам нужна помощь, пожалуйста, свяжитесь с нашей службой поддержки<br>
+                      Email: <a class="link__text" href="mailto:support@nwtin.com">support@nwtin.com</a> 
+                      <a class="link__text" href="https://sso.nwtin.com/online/support" target="black">Онлайн чат.</a>
+                </p>
+                <em class="c-meta-text">
+                    Поля отмеченные * обязательны для заполнения
+                </em>
+            </div>
+        </div>
+    </section> 
+
+    
+    <form id="form-registration" action="" method=post enctype="multipart/form-data" >
+        {{ form_open() }}
+            <!--start form content-->
+            <section data-grid="col-12 pad-12x">
+            <!--Header-->
+            <div data-grid="col-8">
+                <h2 class="c-heading-2">Персональные данные</h2>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-4">
+                <div class="form-fill-progress">
+                    <div class="form-fill-progress__bar">
+                        <span class="form-fill-progress__caption">
+                            <span class="c-label">NWT{{ user.id * 8586 * 7 * 26}}</span>
+                        </span>
+                        <span class="form-fill-progress__scale">
+                            <span class="form-fill-progress__scale-fill" style="width: 0%;"></span>
+                            <span class="form-fill-progress__scale-fill form-fill-progress__scale-fill--valid" style="width: 50%;"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6"> 
+                <label class="c-label" for="middle_name">Отчество*</label>
+                <input
+                    name="middle_name" 
+                    class="nwt-input" 
+                    type="text"
+                    data-validation-length="4-20"
+                    data-validation-allowing=" "
+                    data-validation-regexp="^([А-Яа-яA-Za-z ]+)$"
+                    data-validation="length custom"
+                    data-validation-error-msg="Введите отчество, минимум 4 символов." 
+                />
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-3">
+                <label class="c-label" for="birthdate">Дата рождения*</label>
+                <input
+                    name="birthdate" 
+                    type='text' 
+                    class="datepicker-here nwt-input"
+                    data-validation-format="dd.mm.yyyy" 
+                    data-mask="00.00.0000"
+                    data-validation="required birthdate"
+                />
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-3">
+                <fieldset class="c-radio f-inline">
+                    <legend class="c-label">Пол*</legend>
+                    <div>
+                        <div>
+                            <label class="c-label">
+                                <input id="inline1" type="radio" name="gender" value="мужской" checked="true">
+                                <span>мужской</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="inline2" type="radio" name="gender" value="женский">
+                                <span>женский</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="inline3" type="radio" name="gender" value="не указан">
+                                <span>не указан</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="study">Уровень образования*</label>
+                <select id="border" class="nwt-select" name="study" data-validation="required">
+                    <option  value=" ">Выберите...</option>
+                    <option value="Средняя школа">Средняя школа</option>
+                    <option value="Бакалавр или эквивалент">Бакалавр или эквивалент</option>
+                    <option value="Магистратура или эквивалент">Магистратура или эквивалент</option>
+                    <option value="Доктор наук или эквивалент">Доктор наук или эквивалент</option>
+                    <option value="Нет образования">Нет образования</option>
+                </select>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="usa_citzen">Являетесь ли вы гражданином США ?*</label>
+                <select class="nwt-select" name="usa_citzen" data-validation="required">
+                    <option  value=" ">Выберите...</option>
+                    <option value="Да">Да </option>
+                    <option value="Нет">Нет</option>
+                </select>
+            </div>
+            <!--Header-->
+            <div data-grid="col-8">
+                <h2 class="c-heading-2">Инвестиционный профиль</h2>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="work">Тип занятости*</label>
+                <select class="nwt-select" name="work" data-validation="required">
+                    <option  value=" ">Выберите...</option>
+                    <option value="Наемный сотрудник">Наемный сотрудник</option>
+                    <option value="Самозанятый">Самозанятый</option>
+                    <option value="На пенсии">На пенсии</option>
+                    <option value="Студент">Студент</option>
+                    <option value="Студент">Безработный</option>
+                </select>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="anual_income">Годовой доход*</label>
+                <select class="nwt-select" name="anual_income" data-validation="required">
+                    <option  value=" ">Выберите...</option>
+                    <option value="0 – 50к$">0 – 50к$</option>
+                    <option value="50k – 100k$">50k – 100k$</option>
+                    <option value="100k – 250k$">100k – 250k$</option>
+                    <option value="250k – 500k$">250k – 500k$</option>
+                    <option value="500k – 1000k$">500k – 1000k$</option>
+                    <option value=">1000k$">>1000k$</option>
+                </select>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="income_source">Источник дохода*</label>
+                <select class="nwt-select" name="income_source" data-validation="required">
+                    <option value=" ">Выберите...</option>
+                    <option value="Частный предприниматель / Владелец бизнеса">Частный предприниматель / Владелец бизнеса</option>
+                    <option value="Сбережения / Инвестиции">Сбережения / Инвестиции</option>
+                    <option value="Подарки / Наследство">Подарки / Наследство</option>
+                    <option value="Другое">Другое</option>
+                </select>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <fieldset class="c-radio f-inline">
+                    <legend class="c-label">Есть ли у вас опыт торговли?*</legend>
+                    <div>
+                        <div>
+                            <label class="c-label">
+                                <input id="trading_status1" type="radio" name="trading_status" value="Real">
+                                <span>Да, я торговал на реальном торговом счете.</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_status2" type="radio" name="trading_status" value="Demo">
+                                <span>Да, я торговал на демо – счете</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_status3" type="radio" name="trading_status" value="Нет" checked="true">
+                                <span>Нет</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <fieldset class="c-radio f-inline">
+                    <legend class="c-label">Знания и опыт финансовых инструментов*</legend>
+                    <div>
+                        <div>
+                            <label class="c-label">
+                                <input id="trading_experence1" type="radio" name="trading_experence" value="Акции/Облигации">
+                                <span>Фондовый рынок</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_experence2" type="radio" name="trading_experence" value="CFDs">
+                                <span>Forex/CFDs</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_experence3" type="radio" name="trading_experence" value="Фондовый рынок/CFDs">
+                                <span>Фондовый рынок и Forex/CFDs</span>
+                            </label>
+                            <label class="c-label">
+                                <input id="trading_experence4" type="radio" name="trading_experence" value="Нет" checked="true">
+                                <span>Нет</span>
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!--Header-->
+            <div data-grid="col-12">
+                <h2 class="c-heading-2">Адрес проживания</h2>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="contury">Страна*</label>
+                {% partial 'activation/contury' %}
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-6">
+                <label class="c-label" for="contury">Город проживания*</label>
+                <input 
+                    class="nwt-input"
+                    name="city"
+                    type="text"  
+                    data-validation-length="4-40"
+                    data-validation-allowing=" "
+                    data-validation-regexp="^([А-Яа-яA-Za-z ]+)$"
+                    data-validation="length custom required"
+                    data-validation-error-msg="Введите название города в котором вы проживаете, минимум 4 символов, не используйте цифры."
+                />
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-4">
+                <label class="c-label" for="street">Улица*</label>
+                <input 
+                    class="nwt-input"
+                    name="street" 
+                    type="text"
+                    data-validation-length="4-40"
+                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+                    data-validation="length custom required"
+                    data-validation-error-msg="Введите название улицы, минимум 4 символов."
+                />
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-2">
+                <label class="c-label" for="zip">Почтовый индекс</label>
+                <input 
+                    class="nwt-input" 
+                    name="zip"    
+                    data-validation-length="1-10"
+                    type="text" 
+                    data-validation-optional="true"
+                    data-validation-error-msg="Введите индекс, пожалуйста используйте только цифры."
+                    data-validation="number length"
+                />
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-2">
+                <label class="c-label" for="home">Дом</label>
+                <input 
+                    class="nwt-input" 
+                    name="home"    
+                    data-validation-length="1-10"
+                    type="text" 
+                    data-validation-optional="true"
+                    data-validation-error-msg="Введите номер дома."
+                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+                    data-validation="length custom required"
+                />
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-2">
+                <label class="c-label" for="housing">Корпус</label>
+                <input 
+                    class="nwt-input" 
+                    name="housing"    
+                    data-validation-length="1-10"
+                    type="text" 
+                    data-validation-optional="true"
+                    data-validation-error-msg="Введите номер корпуса."
+                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+                    data-validation="length custom required"
+                />
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-2">
+                <label class="c-label" for="apartament">Квартира</label>
+                <input 
+                    class="nwt-input" 
+                    name="apartament"    
+                    data-validation-length="1-10"
+                    type="text" 
+                    data-validation-optional="true"
+                    data-validation-error-msg="Введите номер квартиры."
+                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+                    data-validation="length custom required"
+                />
+            </div>
+            <!--Header-->
+            <div data-grid="col-12">
+                <h2 class="c-heading-2">Соглашение</h2>
+            </div>
+            <!--BLOCK-->
+            <div class="nwt-margin-small-top" data-grid="col-12">
+                <div class="c-checkbox">
+                    <label class="c-label">
+                        <input type="checkbox" id="data_acord_one" name="data_acord_risk_personal_data" value="1" aria-checked="false" data-validation="required">
+                        <span aria-hidden="true">
+                        Я внимательно прочитал и соглашаюсь с <a href="https://nwtin.com/doc/risk-disclosure" target="_blank"><span class="link__text">уведомление о рисках</span></a> и я даю свое согласие на <a href="https://nwtin.com/doc/security-politics" target="_blank"><span class="link__text">обработку персональных данных</span></a>.*
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <!--BLOCK-->
+            <div class="nwt-margin-small-top" data-grid="col-12">
+                <div class="c-checkbox">
+                    <label class="c-label">
+                        <input type="checkbox" id="data_acord_one" name="data_acord_juridic" value="1" aria-checked="false" data-validation="required">
+                        <span aria-hidden="true">
+                        Отметив эти поля, Клиент понимает, и соглашается с содержанием соответствующих утверждений и тем фактом, что они экивалентны подписи и могут быть использованы в юридических документов.*
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <!--BLOCK-->
+            <div class="nwt-margin-small-top" data-grid="col-12">
+                <div class="c-checkbox">
+                    <label class="c-label">
+                        <input type="checkbox" id="data_acord_one" name="data_acord_personal_data_ok" value="1" aria-checked="false" data-validation="required">
+                        <span aria-hidden="true">
+                        Я подтверждаю точность введенных данных, и в будущем я смогу подтвердить их, если это необходимо.*
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <!--BLOCK-->
+            <div class="nwt-margin-small-top" data-grid="col-12">
+                <div class="c-checkbox">
+                    <label class="c-label">
+                        <input type="checkbox" id="data_acord_one" name="data_acord_contact" value="1" aria-checked="false" data-validation="required">
+                        <span aria-hidden="true">
+                        Я разрешаю NWT INVEST связаться со мной, если NWT INVEST сочтет это необходимым.* 
+                        </span>
+                    </label>
+                </div>
+            </div>
+            <!--BUTON-->
+            <div class="nwt-margin-medium-top" data-grid="col-12">
+                <button role="button" type="submit" class="button button_size_xl button_width_available button_theme_nwt-on-white" >
+                    <span class="button__text">Завершить</span>
+                </button>
+            </div>
+
+        
+        <!--end form content-->
+        </section>   
+        {{ form_close() }}
+     </form>
+
+ </article>   
+ <script>
+    $.validate({
+  modules : 'security, toggleDisabled'
+});
+    $.validate({
+  modules : 'date'
+});
+    $.validate({
+  lang : 'ru'
+});
+ </script>
+ 

@@ -1,0 +1,9 @@
+==
+{% if user.account_frist_active == null %}
+    {% set balance = '00.00' %}
+{% elseif user.account_frist_balance == null %}
+	{% set balance = 0 %}
+{% else %}
+	{% set balance = user.account_frist_balance %}
+{% endif %}
+{{ balance }}

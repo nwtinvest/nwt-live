@@ -1,0 +1,75 @@
+title = "Информация об учетной записи"
+url = "/profile"
+layout = "home/index"
+is_hidden = 0
+
+[RainLab\User\Components\Account account]
+paramCode = "code"
+forceSecure = 0
+==
+<article data-grid="stack-1" class="context-heading">
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Информация об аккаунте NWT INVEST</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<h2 class="heading heading_size_m heading_theme_nwt-on-white" style="font-weight: 400;">
+				Информация об аккаунте {% partial 'variabiles/nwtid' %}
+			</h2>
+			<hr class="c-divider">
+		</div>
+	</section>
+
+	<section data-grid="col-12 pad-12x">
+		
+		<div class="nwt-margin-medium-top" data-grid="col-2">
+			<div class="person-picture">
+			    <div>
+			        {% partial 'variabiles/avatar' %}
+			    </div>
+			</div>
+			<div class="edit-button nwt-text-center"> 
+				<a href="/profile/edit-picture" class="link__text">
+					<span> Изменить аватар </span>
+				</a> 
+			</div>
+		</div>
+
+		<div class="nwt-text-left" data-grid="col-10">
+			<h2 class="heading heading_size_xl heading_theme_nwt-on-white">
+				{% partial 'variabiles/name' %} {% partial 'variabiles/surname' %}
+			</h2>
+			<h2 class="heading heading_size_m heading_theme_nwt-on-white" style="font-weight: 400;">
+				<span class="icon icon_size_xl icon_name_phone icon_theme_nwt-on-white"></span> {% partial 'variabiles/phone' %}
+			</h2>
+			<h2 class="heading heading_size_m heading_theme_nwt-on-white" style="font-weight: 400;">
+				<span class="icon icon_size_xl icon_name_email icon_theme_nwt-on-white"></span> {% partial 'variabiles/email' %}
+			</h2>
+			<h2 class="heading heading_size_m heading_theme_nwt-on-white" style="font-weight: 400;">
+				<span class="icon icon_size_xl icon_name_bd icon_theme_nwt-on-white"></span> {% partial 'variabiles/bd' %}
+			</h2>
+			<h2 class="heading heading_size_m heading_theme_nwt-on-white" style="font-weight: 400;">
+				<span class="icon icon_size_xl icon_name_contury icon_theme_nwt-on-white"></span> {% partial 'variabiles/contury' %}
+			</h2>
+			<h2 class="heading heading_size_m heading_theme_nwt-on-white" style="font-weight: 400;">
+				<span class="icon icon_size_xl icon_name_id icon_theme_nwt-on-white"></span> {% partial 'variabiles/nwtid' %}
+			</h2>
+		</div>
+
+	</section>
+
+</article>

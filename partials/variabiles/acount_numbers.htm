@@ -1,0 +1,7 @@
+==
+{% if user.account_frist_number == null %}
+	    {% set account = '00000000' %}
+{% else %}
+	    {% set account = user.account_frist_number %}
+{% endif %}
+#{{ account }}

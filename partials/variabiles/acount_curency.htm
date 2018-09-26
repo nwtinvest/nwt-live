@@ -1,0 +1,7 @@
+==
+{% if user.account_frist_active == null %}
+	    {% set curency = '$' %}
+{% else %}
+	    {% set curency = user.account_frist_curency %}
+{% endif %}
+{{ curency }}

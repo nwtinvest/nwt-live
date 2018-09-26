@@ -1,0 +1,159 @@
+title = "Изменить адрес"
+url = "/settings/adress"
+layout = "home/index"
+is_hidden = 0
+==
+<article data-grid="stack-1" class="context-heading">
+
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Изменить адрес</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+    
+    <section data-grid="col-12 pad-12x">
+        <div data-grid="col-12">
+			<h2 class="c-heading-2">Изменить адрес</h2>
+			<hr class="c-divider f-pad-bottom-3x">
+		</div>
+    </section> 
+
+    
+    <form id="form-registration" action="" method=post enctype="multipart/form-data" >
+        {{ form_open() }}
+            <!--start form content-->
+            <section data-grid="col-12 pad-12x">
+            <!--Header-->
+           
+            <!--BLOCK-->
+            <div data-grid="col-12">
+	            <div data-grid="col-6">
+	                <label class="c-label" for="contury">Страна*</label>
+	                {% partial 'activation/contury' %}
+	            </div>
+	        </div>
+            <!--BLOCK-->
+            <div data-grid="col-12">
+	            <div data-grid="col-6">
+	                <label class="c-label" for="contury">Город проживания*</label>
+	                <input 
+	                    class="nwt-input"
+	                    name="city"
+	                    type="text"  
+	                    data-validation-length="4-40"
+	                    data-validation-allowing=" "
+	                    data-validation-regexp="^([А-Яа-яA-Za-z ]+)$"
+	                    data-validation="length custom required"
+	                    data-validation-error-msg="Введите название города в котором вы проживаете, минимум 4 символов, не используйте цифры."
+	                />
+	            </div>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-12">
+	            <div data-grid="col-4">
+	                <label class="c-label" for="street">Улица*</label>
+	                <input 
+	                    class="nwt-input"
+	                    name="street" 
+	                    type="text"
+	                    data-validation-length="4-40"
+	                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+	                    data-validation="length custom required"
+	                    data-validation-error-msg="Введите название улицы, минимум 4 символов."
+	                />
+	            </div>
+            <!--BLOCK-->
+	            <div data-grid="col-2">
+	                <label class="c-label" for="zip">Почтовый индекс</label>
+	                <input 
+	                    class="nwt-input" 
+	                    name="zip"    
+	                    data-validation-length="1-10"
+	                    type="text" 
+	                    data-validation-optional="true"
+	                    data-validation-error-msg="Введите индекс, пожалуйста используйте только цифры."
+	                    data-validation="number length"
+	                />
+	            </div>
+            </div>
+            <!--BLOCK-->
+            <div data-grid="col-12">
+	            <div data-grid="col-2">
+	                <label class="c-label" for="home">Дом</label>
+	                <input 
+	                    class="nwt-input" 
+	                    name="home"    
+	                    data-validation-length="1-10"
+	                    type="text" 
+	                    data-validation-optional="true"
+	                    data-validation-error-msg="Введите номер дома."
+	                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+	                    data-validation="length custom required"
+	                />
+	            </div>
+            <!--BLOCK-->
+	            <div data-grid="col-2">
+	                <label class="c-label" for="housing">Корпус</label>
+	                <input 
+	                    class="nwt-input" 
+	                    name="housing"    
+	                    data-validation-length="1-10"
+	                    type="text" 
+	                    data-validation-optional="true"
+	                    data-validation-error-msg="Введите номер корпуса."
+	                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+	                    data-validation="length custom required"
+	                />
+	            </div>
+            <!--BLOCK-->
+	            <div data-grid="col-2">
+	                <label class="c-label" for="apartament">Квартира</label>
+	                <input 
+	                    class="nwt-input" 
+	                    name="apartament"    
+	                    data-validation-length="1-10"
+	                    type="text" 
+	                    data-validation-optional="true"
+	                    data-validation-error-msg="Введите номер квартиры."
+	                    data-validation-regexp="^([А-Яа-яA-Za-z0-9 ]+)$"
+	                    data-validation="length custom required"
+	                />
+	            </div>
+	         </div>
+            <!--BUTON-->
+            <div data-grid="col-12">
+	            <div class="nwt-margin-medium-top" data-grid="col-6">
+	                <button role="button" type="submit" class="button button_size_xl button_width_available button_theme_nwt-on-white" >
+	                    <span class="button__text">Завершить</span>
+	                </button>
+	            </div>
+            </div>
+
+        
+        <!--end form content-->
+        </section>   
+        {{ form_close() }}
+     </form>
+
+ </article>   
+ <script>
+    $.validate({
+  modules : 'security, toggleDisabled'
+});
+    $.validate({
+  modules : 'date'
+});
+    $.validate({
+  lang : 'ru'
+});
+ </script>

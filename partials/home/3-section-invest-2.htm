@@ -1,0 +1,42 @@
+==
+<div data-grid=col-4>
+    <div class="c-card {% partial 'home/margin' %}">
+        <div class="c-card-content nwt-text-left nwt-card-body">
+            <div>
+                <h2 class="c-heading-5" data-grid=col-12 style="padding: 0px 0 6px;">
+				    Прибыли за всё время.
+				</h2>
+                <div class="earned-management">
+                    {% if user.account_frist_active == null %}
+                    <div class="add-account__subtitle">Счёт не активирован</div>
+                    {% else %}
+                    <div class="add-account__subtitle">Счёт {% partial 'variabiles/acount_numbers' %}</div>
+                    {% endif %}
+                    <div class="earned-management">
+                        <div class="money">
+                            {% partial 'variabiles/acount_yar_profit.htm' %}
+                            <span class="currency">%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% if user.account_frist_active == null %}
+            <div class="tile-stub"></div>
+            {% else %}
+            <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+                <span class="icon icon_size_s icon_name_calendar icon_theme_nwt-on-white"></span>
+                {% partial 'variabiles/acount_date' %}
+            </p>
+            {% endif %}
+            {% if user.account_frist_active == null %}
+            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white" disabled>
+                <span class="button__text">Подробнее</span>
+            </button>
+            {% else %}
+            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+                <span class="button__text"><a href="/invest">Подробнее</a></span>
+            </button>
+            {% endif %}
+        </div>
+    </div>
+</div>

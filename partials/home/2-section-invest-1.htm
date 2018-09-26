@@ -1,0 +1,30 @@
+==
+<div data-grid=col-4>
+    <div class="c-card {% partial 'home/margin' %}">
+        <div class="c-card-content-invest nwt-text-left nwt-card-body">
+            <div>
+                <h2 class="c-heading-5 nwt-light" data-grid=col-12 style="padding: 0px 0 6px;">
+				    <a href="/invest">Счёт {% partial 'variabiles/acount_numbers' %}</a>
+				</h2>
+                <div class="earned-management">
+                    <div class="add-account__subtitle nwt-light">Баланс:</div>
+                    <div class="earned-management">
+                        <div class="money nwt-light">{% partial 'variabiles/acount_balance' %} <span class="currency">{% partial 'variabiles/acount_curency' %}</span></div>
+                    </div>
+                </div>
+            </div>
+            <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-color">
+                {% partial 'variabiles/acount_status' %}
+            </p>
+            {% if user.account_frist_active == null %}
+            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+                <span class="button__text"><a href="/invest/add">Добавить счёт</a></span>
+            </button>
+            {% else %}
+            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+                <span class="button__text"><a href="/invest">Подробнее</a></span>
+            </button>
+            {% endif %}
+        </div>
+    </div>
+</div>

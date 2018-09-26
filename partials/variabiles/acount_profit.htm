@@ -1,0 +1,9 @@
+==
+{% if user.account_frist_active == null %}
+    {% set profit = 0 %}
+{% elseif user.account_frist_profit == null %}
+	{% set profit = 0 %}
+{% else %}
+	{% set profit = user.account_frist_profit %}
+{% endif %}
+{{ profit }}

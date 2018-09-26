@@ -1,0 +1,105 @@
+title = "Параметры рекламы"
+url = "/settings/adversing"
+layout = "home/index"
+is_hidden = 0
+==
+<article data-grid="stack-1" class="context-heading">
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Параметры рекламы</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<h2 class="c-heading-2">Параметры рекламы</h2>
+			<hr class="c-divider f-pad-bottom-3x">
+		</div>
+		<div data-grid="col-12">
+		{{ form_ajax('onUpdate', { model: user })}}
+			<form id="user-cpassword">
+				
+				<div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-12">
+						<h2 class="c-heading-4">Социальные сети</h2>
+	                </div>
+					<div data-grid="col-3">
+						<div class="c-toggle">
+						    <label class="c-label" id="c-label-3" for="example-3">Иногда показывать рекламу, продуктов </br>NWT INVEST в социальных сетях</label>
+							    <button id="qr-new" name="qr-new" role="checkbox" aria-checked="true" aria-labelledby="c-label-3 c-state-label-3">
+							    </button>
+						    <span data-on-string="Да" data-off-string="Нет" id="c-state-label-3">Да</span>
+						</div>
+	                </div>
+	            </div>
+	            
+	           <div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-12">
+						<h2 class="c-heading-4">Сайт и сервисы NWT INVEST</h2>
+	                </div>
+					<div data-grid="col-2">
+						<div class="c-toggle">
+						    <label class="c-label" id="c-label-3" for="example-3">Иногда показывать рекламу, продуктов </br>NWT INVEST на сайте.</label>
+							    <button id="qr-new" name="qr-new" role="checkbox" aria-checked="true" aria-labelledby="c-label-3 c-state-label-3">
+							    </button>
+						    <span data-on-string="Да" data-off-string="Нет" id="c-state-label-3">Да</span>
+						</div>
+	                </div>
+	            </div>
+	        	
+	        	<div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-12">
+						<h2 class="c-heading-4">Способы связи </h2>
+	                </div>
+					<div data-grid="col-3">
+						<div class="c-toggle">
+						    <label class="c-label" id="c-label-3" for="example-3">Получать рекламные предложения, по емайлу.</label>
+							    <button id="qr-new" name="qr-new" role="checkbox" aria-checked="true" aria-labelledby="c-label-3 c-state-label-3">
+							    </button>
+						    <span data-on-string="Да" data-off-string="Нет" id="c-state-label-3">Да</span>
+						</div>
+	                </div>
+	                <div data-grid="col-3">
+		            	<div class="c-toggle">
+						    <label class="c-label" id="c-label-3" for="example-3">Получать рекламные предложения, в открытых линиях?</label>
+							    <button id="qr-new" name="qr-new" role="checkbox" aria-checked="true" aria-labelledby="c-label-3 c-state-label-3">
+							    </button>
+						    <span data-on-string="Да" data-off-string="Нет" id="c-state-label-3">Да</span>
+						</div>
+		            </div>
+	            </div>
+
+		        <div class="nwt-margin-medium-top" data-grid="col-12">
+					<div data-grid="col-6">
+			           	<button role="button" type="submit" class="button button_size_xl button_width_available button_theme_nwt-on-white" >
+			                <span class="button__text">Сохранить</span>
+			            </button>
+			    	</div>
+		        </div>
+
+            </form>
+        {{ form_close() }}
+	</div>
+	
+	</section>
+
+</article>
+<script>
+$.validate({
+    modules: 'security, toggleDisabled'
+});
+$.validate({
+    lang: 'ru'
+});
+</script>

@@ -1,0 +1,10 @@
+==
+{% if user.avatar == null %}
+   <picture role="img">
+        <img class="c-image f-round" src="{{ 'assets/img/icons/nwt-icon-full.png'|theme }}">
+   </picture>
+{% else %}
+    <picture role="img">
+        <img class="c-image f-round" src="{{ user.avatar.path }}" style="width: 100%; height: 100%; border-radius: 50%; ">
+    </picture>
+{% endif%}

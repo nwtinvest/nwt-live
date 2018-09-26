@@ -1,0 +1,14 @@
+==
+{% if user.account_frist_number == null %}
+    <img class="c-image" src="{{ 'assets/img/icons/stub-mini.svg'|theme }}" style=" width: 57px;">
+{% elseif user.account_frist_active == null and user.account_frist_bad == null %}
+	   Верификация
+{% elseif user.account_frist_active == null and user.account_frist_bad is not null %}
+	   Счёт недействителен!
+{% elseif user.account_frist_active is not null and user.account_frist_bad == null %}
+	   Активирован
+{% elseif user.account_frist_active == null %}
+      Не Активирован
+{% else %}
+	   Обратитесь в поддержку
+{% endif %}

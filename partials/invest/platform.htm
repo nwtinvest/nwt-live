@@ -1,0 +1,425 @@
+==
+{% if user.account_frist_trading_platform == null %}
+
+{% elseif user.account_frist_trading_platform == 'MetaTrader 4' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+        		<img class="c-image f-round" src="{{ 'assets/img/platform/mt4.png'|theme }}" style="border-radius: 50%; ">
+    		</picture>
+        </div>
+        <div>
+            <h5 class="c-heading">MetaTrader 4</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'MetaTrader 5' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+        		<img class="c-image f-round" src="{{ 'assets/img/platform/mt5.png'|theme }}" style="border-radius: 50%; ">
+    		</picture>
+        </div>
+        <div>
+            <h5 class="c-heading">MetaTrader 4</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'cTrader' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/ctrader.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">cTrader</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'CitiFX Pro Desktop' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/C.svg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">CitiFX Pro Desktop</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'CitiFX Pro Web' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/C.svg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">CitiFX Pro Web</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'IQTrader' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/IQ.svg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">IQTrader</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'Colmex Pro Trader' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/Colmex-Pro.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">Colmex Pro Trader</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'Trading station' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/tradestation.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">Trading station</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'CMC Markets' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/C.svg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">CMC Markets</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'Sirix' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/Sirix.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">Sirix</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'CoreTrader' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/CoreSpreads.jpg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">CoreTrader</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'JForex' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/JForex.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">JForex</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'JForex WEB' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/JForex.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">JForex WEB</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'Dif Freedom' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/DIFBroker.jpg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">Dif Freedom</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'DF Trader' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/DFMarkets.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">DF Trader</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'DF WebTrader' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/DFMarkets.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">DF WebTrader</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'OptionsHouse Platform' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/OptionsHouse.jpg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">OptionsHouse Platform</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'E*TRADE web' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/ETradeFX.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">E*TRADE web</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'ETX TraderPro' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/ETXCapital.jpg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">ETX TraderPro</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'NinjaTrader' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/NinjaTrader.png'|theme }}" style="border-radius: 0%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">NinjaTrader</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'IRESS' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/IRESS.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">IRESS</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'Currenex' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/Currenex.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">Currenex</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'Vertex FX' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/VertexFX.png'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">Vertex FX</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'Trader Workstation' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/broker/InteractiveBrokersGroup.jpg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">Trader Workstation</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'NetTradeX' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/X.svg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">NetTradeX</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'FinamTrade' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/FinamTrade.jpg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">FinamTrade</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% elseif user.account_frist_trading_platform == 'QUIK' %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/QUIK.jpg'|theme }}" style="border-radius: 50%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">QUIK</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+{% else %}
+<div data-grid="col-6">
+    <div class="m-persona-1">
+        <div>
+            <picture role="img">
+                <img class="c-image f-round" src="{{ 'assets/img/platform/mt5.png'|theme }}" style="border-radius: 0%; ">
+            </picture>
+        </div>
+        <div>
+            <h5 class="c-heading">{% partial 'variabiles/acount_platform' %}</h5>
+            <p class="c-subheading">{% partial 'variabiles/acount_broker_server' %}</p>
+            <p class="c-subheading">Пароли: <a data-js-dialog-show="password-preview">показать</a></p>
+        </div>
+    </div>
+</div>
+
+{% endif %}

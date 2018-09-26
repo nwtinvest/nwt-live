@@ -1,0 +1,40 @@
+==
+<section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+	    
+	    <div  data-grid="col-6">
+    	    <div class="m-persona-1">
+    	        <div>
+    	            {% partial 'variabiles/avatar' %}
+    	        </div>
+    	        <div>
+    	            <h5 class="c-heading">{% partial 'variabiles/name' %}</h5>
+    	            <p class="c-subheading">{% partial 'variabiles/nwtid' %}</p>
+    	        </div>
+    	    </div>
+    	</div>
+    		
+    	<div data-grid="col-6">
+    		   <div class="time">
+    		       <div class="account-time">
+    		           <div class="add-account__subtitle">Дата:</div>
+    		           <div id="clock">{{ "now"|date("d-m-Y H:i:s") }}</div>
+    		        </div>
+    		   </div>
+    		   <div class="earned-management">
+    		    	<div class="add-account__subtitle">Доход от управления:</div>
+    			    <div class="earned-management">
+    			   {% if user.account_frist_active == null %}
+    			        <div class="money">0 <span class="currency gray">USD</span></div>
+    			        <div class="money">0 <span class="currency gray">EUR</span></div>
+    			        <div class="money">0 <span class="currency gray">RUR</span></div>
+    			        <div class="money">0 <span class="currency gray">CHF</span></div>
+    			        <div class="money">0 <span class="currency gray">GBP</span></div>
+    			        <div class="money">0 <span class="currency gray">JPY</span></div>
+    			 {% else %}
+    			 <div class="money">{% partial 'variabiles/acount_profit' %} <span class="currency gray">USD</span></div>
+    			 {% endif %}
+    			    </div>
+    		   </div>
+    	</div>
+
+</section>

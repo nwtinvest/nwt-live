@@ -1,0 +1,83 @@
+title = "Изменить аватар"
+url = "/settings/avatar"
+layout = "home/index"
+is_hidden = 0
+
+[RainLab\User\Components\Account account]
+paramCode = "code"
+forceSecure = 0
+
+[imageUploader]
+placeholderText = "Click or drag images to upload"
+maxSize = 5
+fileTypes = ".gif,.jpg,.jpeg,.png"
+imageWidth = 400
+imageHeight = 400
+imageMode = "crop"
+modelClass = "RainLab\User\Models\User"
+modelKeyColumn = "picture"
+identifierValue = "{{ :id }}"
+==
+<?php
+function onInit()
+{
+    $user = Auth::getUser();
+    if($user){
+        $component = $this->addComponent(
+            'NetSTI\Uploader\Components\ImageUploader',
+            'imageUploader',
+            ['modelClass'=>'RainLab\User\Models\User','modelKeyColumn'=>'avatar', 'deferredBinding' => false]
+        );
+
+        $component->bindModel('avatar', $user);
+    }
+}
+?>
+==
+<article data-grid="stack-1" class="context-heading">
+	
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<nav>
+			    <ol class="c-breadcrumb">
+			        <li>
+			            <a class="c-hyperlink" href="/">Личный кабинет</a>
+			        </li>
+			        <li>
+			            <a class="c-hyperlink" href="/settings">Настройки</a>
+			        </li>
+			        <li>Изменить аватар</li>
+			    </ol>
+			</nav>
+		</div>
+	</section>
+<section data-grid="col-12 pad-12x">
+	<div data-grid="col-12">
+			<h2 class="c-heading-2">Изменить аватар</h2>
+			<hr class="c-divider f-pad-bottom-3x">
+	</div>
+</section>
+	<section data-grid="col-12 pad-12x">
+		<div data-grid="col-12">
+			<div class="m-persona-1">
+    	        <div>
+    	            {% partial 'variabiles/avatar' %}
+    	        </div>
+    	        <div>
+    	            <h5 class="c-heading">{% partial 'variabiles/name' %}</h5>
+    	            <p class="c-subheading">{% partial 'variabiles/nwtid' %}</p>
+    	        </div>
+    	    </div>
+		</div>
+		<div class="nwt-margin-medium-top" data-grid="col-4">
+			{% component 'imageUploader' %}
+		</div>
+		<div class="nwt-margin-medium-top" data-grid="col-4">
+			<ul class="c-list">
+			    <li>Максимальный размер 5mb.</li>
+			    <li>Доступные расширения файлов .gif .jpg .jpeg .png</li>
+			</ul>
+		</div>
+	</section>
+
+</article>

@@ -1,0 +1,153 @@
+title = "Доверительное управления"
+url = "/investments"
+layout = "home/index"
+is_hidden = 0
+
+[RainLab\User\Components\Account account]
+paramCode = "code"
+forceSecure = 0
+==
+<article data-grid="stack-1" class="context-heading">
+	<section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+		{% partial 'invest/broker' %}
+		{% partial 'invest/platform' %}
+	</section>
+	<section class="nwt-margin-medium-top" data-grid="col-12 pad-12x">
+		<h2 class="add-account__title heading_theme_nwt-on-white">
+			<div class="icon icon-nwt-invest"></div>{% partial 'variabiles/acount_numbers' %}
+		</h2>
+		<!--end heda-->
+	    	
+		<!--slide1-->
+		<div data-grid=col-4>
+		    <div class="c-card {% partial 'home/margin' %}">
+		        <div class="c-card-content nwt-text-left nwt-card-body">
+		            <div>
+		                <h2 class="c-heading-5" data-grid=col-12 style="padding: 0px 0 6px;">
+						    Статус
+						</h2>
+		                <div class="earned-management">
+		                    <div class="add-account__subtitle">Счёт {% partial 'variabiles/acount_numbers' %}</div>
+		                    <div class="earned-management">
+		                        <div class="money">
+		                            {% partial 'variabiles/acount_status_invest.htm' %}
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                
+		            </p>
+		            {% if user.account_frist_active == null and user.account_frist_bad == null %}
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text">Показать данные счёта</span>
+		            </button>
+		            {% elseif user.account_frist_active == null and user.account_frist_bad is not null %}
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text">Подробнее</span>
+		            </button>
+		            {% elseif user.account_frist_active is not null and user.account_frist_bad == null %}
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text">Показать данные счёта</span>
+		            </button>
+		            {% elseif user.account_frist_active == null %}
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text">Подробнее</span>
+		            </button>
+		            {% else %}
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text">Показать данные счёта</span>
+		            </button>
+		            {% endif %}
+		        </div>
+		    </div>
+		</div>
+
+		<!--slide2-->
+		<div data-grid=col-4>
+		    <div class="c-card {% partial 'home/margin' %}">
+		        <div class="c-card-content nwt-text-left nwt-card-body">
+		            <div>
+		                <h2 class="c-heading-5" data-grid=col-12 style="padding: 0px 0 6px;">
+						    Изначальная сумма 
+						</h2>
+		                <div class="earned-management">
+		                    <div class="add-account__subtitle">{% partial 'variabiles/acount_numbers' %}</div>
+		                    <div class="earned-management">
+		                        <div class="money">
+		                            {% partial 'variabiles/acount_balance_start' %}
+		                            <span class="currency">{% partial 'variabiles/acount_curency' %}</span>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                
+		            </p>
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text" data-js-dialog-show="password-preview">Подробнее</span>
+		            </button>
+		        </div>
+		    </div>
+		</div>
+		
+		<!--slide3-->
+		<div data-grid=col-4>
+		    <div class="c-card {% partial 'home/margin' %}">
+		        <div class="c-card-content-invest nwt-text-left nwt-card-body">
+		            <div>
+		                <h2 class="c-heading-5 nwt-light" data-grid=col-12 style="padding: 0px 0 6px;">
+						    <a href="/invest">Счёт {% partial 'variabiles/acount_numbers' %}</a>
+						</h2>
+		                <div class="earned-management">
+		                    <div class="add-account__subtitle nwt-light">Баланс:</div>
+		                    <div class="earned-management">
+		                        <div class="money nwt-light">
+		                        	{% partial 'variabiles/acount_balance' %} 
+		                        <span class="currency">{% partial 'variabiles/acount_curency' %}</span>
+		                    	</div>
+		                    </div>
+		                </div>
+		            </div>
+		            <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                
+		            </p>
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text"><a href="/invest">Подробнее</a></span>
+		            </button>
+		        </div>
+		    </div>
+		</div>
+
+		<!--slide4-->
+		<div data-grid=col-4>
+		    <div class="c-card {% partial 'home/margin' %}">
+		        <div class="c-card-content nwt-text-left nwt-card-body">
+		            <div>
+		                <h2 class="c-heading-5" data-grid=col-12 style="padding: 0px 0 6px;">
+						    Доход от управления
+						</h2>
+		                <div class="earned-management">
+		                    <div class="add-account__subtitle">{% partial 'variabiles/acount_date' %} в валюте счета {% partial 'variabiles/acount_curency' %}</div>
+		                    <div class="earned-management">
+		                        <div class="money">
+		                            {% partial 'variabiles/acount_profit' %}
+		                            <span class="currency">{% partial 'variabiles/acount_curency' %}</span>
+		                        </div>
+		                    </div>
+		                </div>
+		            </div>
+		            <p class="paragraph paragraph_view_normal paragraph_theme_nwt-on-white">
+		                
+		            </p>
+		            <button role="button" type="button" class="button button_size_s button_theme_nwt-on-white">
+		                <span class="button__text"><a href="/invest">Подробнее</a></span>
+		            </button>
+		        </div>
+		    </div>
+		</div>
+
+
+	</section>
+</article>
+{% partial 'invest/modal' %}
